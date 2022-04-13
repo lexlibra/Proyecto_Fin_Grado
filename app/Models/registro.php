@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include '../Models/conexion.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,11 +8,11 @@ include 'conexion.php';
     <meta charset="UTF-8">
     <title>Formulario de registro</title>
     <link rel="stylesheet" href="estilos.css">
-    <script src="validar.js"></script>
-    <link rel="stylesheet" href="registro.css">
+    <script src="../Resources/js/validar.js"></script>
+    <link rel="stylesheet" href="../Resources/css/registro.css">
   </head>
   <body>
-    <script src="validar.js"></script>
+    <script src="../Resources/js/validar.js"></script>
     <div class="body"></div>
         <div class="grad"></div>
             <div class="header">
@@ -62,7 +62,7 @@ if(isset($_REQUEST['Registrar'])){
         $execute = $conn->prepare($sql);
         $execute->execute();
         $request= $execute->fetchAll(PDO::FETCH_ASSOC);
-        header('Location: login.php');
+        header('Location: ../Models/login.php');
     }
 }catch(PDOException $ex){
     echo $ex->getMessage();
