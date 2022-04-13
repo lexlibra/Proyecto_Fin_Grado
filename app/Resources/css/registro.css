@@ -16,7 +16,7 @@ body{
 	bottom: 0px;
 	width: auto;
 	height: auto;
-	background-image: url(fondo3.jpg);
+	background-image: url(../pictures/fondo3.jpg);
 	background-size: cover;
 	-webkit-filter-filter: blur(5px);
 	-webkit-background-size: cover;

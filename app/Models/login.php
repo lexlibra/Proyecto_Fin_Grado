@@ -7,7 +7,7 @@ include '../Models/conexion.php';
     <title>Formulario registro Easyrock</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../Resources/css/login.css">
   </head>
   <body>
     <div class="body"></div>
