@@ -58,7 +58,7 @@ if(isset($_REQUEST['Registrar'])){
     if($count>=1){
       echo "<span style='color:white'>EMAIL EXISTENTE</span><br>";
     }else{
-        $sql="INSERT IGNORE INTO usuarios(nombre, apellido1, apellido2, telefono, correo, contrasenia, fecha) VALUES('$_POST[nombre]', '$_POST[apellido1]','$_POST[apellido2]', '$_POST[telefono]','$_POST[correo]', '$contrasenaCif', $_POST[fecha])";
+        $sql="INSERT IGNORE INTO usuarios(nombre, apellido1, apellido2, teléfono, correo, contrasenia, fecha) VALUES('$_POST[nombre]', '$_POST[apellido1]','$_POST[apellido2]', '$_POST[telefono]','$_POST[correo]', '$contrasenaCif', $_POST[fecha])";
         $execute = $conn->prepare($sql);
         $execute->execute();
         $request= $execute->fetchAll(PDO::FETCH_ASSOC);

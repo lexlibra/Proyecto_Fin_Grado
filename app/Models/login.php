@@ -18,11 +18,11 @@ include '../Models/conexion.php';
             <br>
         <div class="login">
             <form action="" method="post">
-                <input type="text" placeholder="Su ID de usuario" name="correo"><br>
+                <input type="text" placeholder="Su Correo de usuario" name="correo"><br>
                 <input type="password" placeholder="Contraseña" name="contrasenia"><br><br>
                 <input type="checkbox" name="recuerdame"> <span class="recuerdame">Recuérdame</span><br>
                 <input class="btn" type="submit" name="btnEnviar" value="Acceder">
-                <a href="registro.php"><input class="registrate" type="button" name="registrate" value="No estoy registrado"></a><br><br>
+                <a href="../Models/registro.php"><input class="registrate" type="button" name="registrate" value="No estoy registrado"></a><br><br>
             </form>
     </div>
 </body>
@@ -35,28 +35,31 @@ if (isset($_POST["btnEnviar"])){
     $correo = $_POST['correo'];
     $contrasena = $_POST['contrasenia'];
     
-
-    $sql = "SELECT * FROM usuarios WHERE correo='$correo'"; 
+    $sql="USE easyrock;";
+    $conn->exec($sql);
+    $sql = "SELECT correo, contrasenia FROM usuarios WHERE correo='$correo'"; 
     $query = $conn -> prepare($sql);
     $query -> execute(); 
-    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $result = $query->fetchAll(PDO::FETCH_ASSOC);
     if($result){
         $verificacionHash = password_verify($contrasena, $result['contrasenia']);
         if($verificacionHash==1){
         
             //session_start();
             //$_SESSION["usuario"];
+            //$usuario=$_SESSION["usuario"];
             echo "<div class='mensaje'> Bienvenido/a " . $correo . "</div>";
+            echo "<div class='mensaje'> Bienvenido/a " . $usuario . "</div>";
             /*if($_POST["recuerdame"]=="recuerdame"){
                 setcookie("usuario", $result["usuario"], time() +600);
                 setcookie("contrasena", $result["contrasena"], time() +600);
             }*/
-            //header("location: filtro.php");
+            //header("location: ../Views/app3.php");
             //die();
         }
         else{
             echo "<div class='mensaje'> Contraseña incorrecta ";
-            print_r($result);
+            //print_r($result);
             echo $contrasena;
             echo "</div>";
         }
