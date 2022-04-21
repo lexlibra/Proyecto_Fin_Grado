@@ -128,9 +128,14 @@
 				<h4>con la posibilidad de hacerte oir </h4>
 				<h4>Gracias a esta aplicación podrás encontrar a solo un click </h4>
 				<h4>todos los locales de ensayo que estén cerca de tí. </h4>
+
+				
+				<h4>Victor</h4>
+
 				<p>Manu</p>
 
 				<h4>Victor</h4>
+
 
 
 
