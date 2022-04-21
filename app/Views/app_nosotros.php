@@ -128,6 +128,7 @@
 				<h4>con la posibilidad de hacerte oir </h4>
 				<h4>Gracias a esta aplicación podrás encontrar a solo un click </h4>
 				<h4>todos los locales de ensayo que estén cerca de tí. </h4>
+				<p>Este es el cambio de Manu</p>
 
 				<h4>Prueba. 3 </h4>
 
