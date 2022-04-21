@@ -130,7 +130,7 @@
 				<h4>todos los locales de ensayo que estén cerca de tí. </h4>
 				<p>Manu</p>
 
-				<h4>Prueba. 3 </h4>
+				<h4>Victor</h4>
 
 
 
